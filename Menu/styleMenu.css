@@ -1,0 +1,110 @@
+*{
+  transition: all 0.5s;
+}
+body {
+  background-color: #454545;
+  margin: 0px;
+}
+
+header {
+  background-color: #454545;
+  height: 80px;
+  padding: 20px;
+  top: 0;
+  text-align: center;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+}
+.side{
+  flex:40%;
+  background-color: gray;
+  height: calc(70vh);
+  border-radius: 20px;
+}
+.main{
+  flex:60%;
+  background-color: #ededed;
+  height: calc(70vh);
+  overflow: scroll;
+}
+button{
+  margin-top: 15px;
+  font-size: 20px;
+  font-family: "Rubik Mono One";
+  color: #FFFFFF;
+  background-color: #EC2020;
+  width: 300px;
+  height: 60px;
+  border-width: thick;
+  border-style: double;
+  border-radius: 15px;
+  border-color: #FFFFFF;
+  border-width: thick;
+  min-width: 50px;
+  align-self: center;
+  cursor: pointer;
+}
+
+#info {
+  font-family: "Fjalla One";
+  font-size: 25px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#imagen{
+  border-radius: 20px
+}
+
+.boton{
+  margin-top: 15px;
+  margin-left: 40%;
+  margin-right: 40%;
+  font-size: 20px;
+  font-family: "Rubik Mono One";
+  color: #FFFFFF;
+  background-color: #EC2020;
+  height: 60px;
+  border-width: thick;
+  border-style: double;
+  border-radius: 15px;
+  border-color: #FFFFFF;
+  border-width: thick;
+  align-self: center;
+}
+button:hover {
+  background-color: #F84F4F;
+  border-color: white;
+}
+
+.menubar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.columna {
+  flex: 25%;
+}
+
+@media screen and (max-width:1250px) {
+  .columna {
+    flex: 50%;
+  }
+
+  header {
+    height: 150px
+  }
+}
+
+@media screen and (max-width:650px) {
+  .menubar {
+    flex-direction: column;
+  }
+
+  header {
+    height: 300px
+  }
+}

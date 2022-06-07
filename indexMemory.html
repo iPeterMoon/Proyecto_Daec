@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="Memory/styleMemory.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!--Cabecera que lleva a las demás páginas-->
+  <header>
+    <div class = "menubar">
+      <div class="columna">
+        <button class="Headr" onclick="document.location='index.html'"> MENU </button>
+      </div>
+      <div class="columna">
+        <button class="Headr" onclick="document.location='indexTTT.html'"> TIC-TAC-TOE </button>
+      </div>
+      <div class="columna">
+        <button class="Headr" onclick="document.location='indexRPS.html'"> ROCK PAPER SCISSORS </button>
+      </div>
+      <div class="columna">
+        <button class="Headr" onclick="document.location='indexSlotM.html'"> SLOT MACHINE </button>
+        </div>
+    </div>
+  </header>
+  <!--Clase del tablero que contiene todas las tarjetas-->
+  <div class="tablero">
+    <div class="row">
+      <!--A partir de aquí se definen las 16 tarjetas-->
+      <!--Tarjeta, funcion que checa que se seleccionen dos tarjetas y checa si son iguales-->
+      <!--Mediante CSS se logró que la tarjeta sea "3D" y que la cara trasera y frontal estén en
+        sus respectivas caras en el mismo div, que se voltearán con funciones rotateY-->
+      <div class="tarjeta" id="tarjeta0" onclick="seleccionarTarjeta(0)">
+        <!--Cara trasera de la tarjeta, donde se insertará la imagen mediante el script-->
+        <div class="cara trasera" id="trasera0"> </div>
+        <!--Cara superior, todas llevan la misma imagen-->
+        <div class="cara superior">
+          <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta1" onclick="seleccionarTarjeta(1)">
+          <div class="cara trasera" id="trasera1"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta2" onclick="seleccionarTarjeta(2)">
+          <div class="cara trasera" id="trasera2"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta3" onclick="seleccionarTarjeta(3)">
+          <div class="cara trasera" id="trasera3"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta4" onclick="seleccionarTarjeta(4)">
+          <div class="cara trasera" id="trasera4"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta5" onclick="seleccionarTarjeta(5)">
+          <div class="cara trasera" id="trasera5"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta6" onclick="seleccionarTarjeta(6)">
+          <div class="cara trasera" id="trasera6"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta7" onclick="seleccionarTarjeta(7)">
+          <div class="cara trasera" id="trasera7"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta8" onclick="seleccionarTarjeta(8)">
+          <div class="cara trasera" id="trasera8"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta9" onclick="seleccionarTarjeta(9)">
+          <div class="cara trasera" id="trasera9"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta10" onclick="seleccionarTarjeta(10)">
+          <div class="cara trasera" id="trasera10"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta11" onclick="seleccionarTarjeta(11)">
+          <div class="cara trasera" id="trasera11"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta12" onclick="seleccionarTarjeta(12)">
+          <div class="cara trasera" id="trasera12"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta13" onclick="seleccionarTarjeta(13)">
+          <div class="cara trasera" id="trasera13"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta14" onclick="seleccionarTarjeta(14)">
+          <div class="cara trasera" id="trasera14"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+      <div class="area-tarjeta">
+        <div class="tarjeta" id="tarjeta15" onclick="seleccionarTarjeta(15)">
+          <div class="cara trasera" id="trasera15"> </div>
+          <div class="cara superior">
+            <img src="https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-14.png" width="100px">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Boton para reiniciar el juego (recarga la página)-->
+  <button class="nuevoJuego" onclick="location.reload()">
+    New Game
+  </button>
+
+  <script type="text/javascript">
+  //Definir arrays de selecciones
+    var selecciones = []
+    generarTablero();
+
+    function generarTablero() {
+        //definirá los valores del array como las imagenes que serán las por descubrir.
+       var iconos = [
+        "<img src='Memory/Imagenes/rojo.png' width='100px'>",
+        "<img src='Memory/Imagenes/azul.png' width='100px'>",
+        "<img src='Memory/Imagenes/negro.png' width='100px'>",
+        "<img src='Memory/Imagenes/amarillo.png' width='100px'>",
+        "<img src='Memory/Imagenes/blanco.png' width='100px'>",
+        "<img src='Memory/Imagenes/lima.png' width='100px'>",
+        "<img src='Memory/Imagenes/naranja.png' width='100px'>",
+        "<img src='Memory/Imagenes/morado.png' width='100px'>"
+      ]
+      //Definir array de tarjeta
+      var tarjetas = []
+      for (var i = 0; i < 16; i++) {
+        //Definir el valor de cada elemento de tarjetas[] por medio del objeto DOM y usando su ID, cómo "trasera"+i, O sea, las cartas sin voltear.
+        tarjetas[i] = document.getElementById("trasera" + i)
+      }
+      //Ordena los elementos al azar.
+      //Ordena el array dependiendo de si el parametro es mayor a 0 o menor que 0
+      //Hacer que el parametro oscile entre mayor a 0 y menor que 0
+      //sort() es la que ordena los elementos del array, y Math.random devuelve un valor de entre 0 y uno,
+      tarjetas.sort(() => Math.random() - 0.5)
+      //Mete imagen a los elementos ya ordenados al azar.
+      //tarjetas.lenght es 16 ya que recorre todos los elementos del array tarjetas[]
+      for (var i = 0; i < tarjetas.length; i++) {
+        //al objeto dom por medio del innerHTML
+        //Se define cómo el valor del elemento del array (La imagen)
+        tarjetas[i].innerHTML = iconos[0];
+        //Si no es multiplo de 2 (El residuo).
+        if (i % 2 == 1) {
+        //Elimina el primer elemento de la imagen
+          iconos.splice(0, 1);
+        }
+        //Esto permite que las tarjetas tengan el mismo valor de las imagenes y se repitan solo 1 vez. Dicho de otra forma, permite que haya tarjetas que sean pares.
+      }
+    }
+
+    function seleccionarTarjeta(i) {
+      //Define la variable tarjeta y por medio del objeto DOM y su Id lo define cómo tarjeta1
+      var tarjeta = document.getElementById("tarjeta" + i)
+      if (tarjeta.style.transform != "rotateY(180deg)") {
+        tarjeta.style.transform = "rotateY(180deg)"
+            //.push empuja y agrega un valor al final del array
+        selecciones.push(i)
+      }
+      //Si la longitud del array es 2, se activa la función deseleccionar.
+      if (selecciones.length == 2) {
+        deseleccionar(selecciones)
+        selecciones = []
+      }
+    }
+
+    function deseleccionar(selecciones) {
+      setTimeout(() => {
+        //Definir variables por medio del DOM y con su id concatenar "trasera" con el valor de selecciones
+        var trasera1 = document.getElementById("trasera" + selecciones[0])
+        var trasera2 = document.getElementById("trasera" + selecciones[1])
+        //si no son iguales
+        if (trasera1.innerHTML != trasera2.innerHTML) {
+          //Toma el DOM de tarjeta y lo concatena con el valor del array de selecciones
+          //Los vuelve a ocultar y los rota 0 grados.
+          var tarjeta1 = document.getElementById("tarjeta" + selecciones[0])
+          var tarjeta2 = document.getElementById("tarjeta" + selecciones[1])
+          tarjeta1.style.transform = "rotateY(0deg)"
+          tarjeta2.style.transform = "rotateY(0deg)"
+          //Si son iguales, le cambia el color de fondo a blanco para indicar que es correcto y así se quedan descubiertas.
+        } else {
+          trasera1.style.background = "white"
+          trasera2.style.background = "white"
+        }
+      }, 500); //Tarda medio segundo en realizarse.
+    }
+  </script>
+</body>

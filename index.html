@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Menu/styleMenu.css">
+</head>
+
+<body>
+  <!--Cabecera donde irán los botones para seleccionar el juego y mostrar la información-->
+  <header>
+    <div class="menubar">
+      <div class="columna">
+        <button class="Headr" onclick="cambiar(0)"> TIC-TAC-TOE </button>
+      </div>
+      <div class="columna">
+        <button class="Headr" onclick="cambiar(1)"> ROCK PAPER SCISSORS </button>
+      </div>
+      <div class="columna">
+        <button class="Headr" onclick="cambiar(2)"> SLOT MACHINE </button>
+      </div>
+      <div class="columna">
+        <button class="Headr" onclick="cambiar(3)"> MEMORY GAME </button>
+      </div>
+    </div>
+  </header>
+  <div class="row">
+    <!--Div donde se va a presentar la imagen-->
+    <div class="side">
+      <img id="imagen" src="Menu/Imagenes/default.jpg" alt="" width="100%" height="100%">
+    </div>
+    <!--Div donde va el texto del juego-->
+    <div class="main">
+      <div id="info">
+        <br><br><h2>🔰 Welcome to Arcade games.</h2> <br>Please select a button above the page and read the instructions, if you are interested in the game, we suggest you to click the button below the page to play!
+      </div>
+    </div>
+  </div>
+  <!--Botón que llevará al juego seleccionado-->
+  <button class="boton" onclick="llevar()">
+    GO TO THE GAME
+  </button>
+  <script type="text/javascript">
+    //Elementos DOM de la imagen y el Div del texto
+    var imagen = document.getElementById("imagen");
+    var info = document.getElementById("info");
+    //Variable para llevar al juego seleccionado
+    var juego = "";
+    //Funcion para cambiar la imagen y el texto presentados, usar parametro seleccionado en el html de los botones
+    //Tambien definir variable para llevar a la página con el respectivo botón
+    function cambiar(i) {
+      switch (i) {
+        //Caso del tic tac toe
+        case 0:
+          imagen.src = "Menu/Imagenes/TTT.jpg";
+          info.innerHTML = "In tic-tac-toe there are two players. Each player chooses a set of game pieces. <br><br>❌ First player places one of their game pieces in one of the squares. <br><br>⭕ Second player puts their game piece in a square. <br><br>Continue taking turns, with each person putting a game piece in one empty square on each turn. <br><br>Whoever gets three of their game pieces in a row, (horizontally, diagonally or vertically) first wins the game. If all nine squares are filled with no one having three in a row it's a draw.";
+          juego = "TTT";
+          break;
+        //Caso del piedra papel o tijeras
+        case 1:
+          imagen.src = "Menu/Imagenes/RPS.jpg";
+          info.innerHTML = "In rock-paper-scissors, the player will randomly choose one of three hand signs: rock, paper, or scissors.<br>The  players show their signs at the same time to see who will win. <br><br> Here are the rules that determine which sign beats another: <br><br> 📍 Rock wins over scissor  <br> 📍 Scissors wins over paper <br> 📍 Paper wins over rock <br> 📍 If both players show the same sign, it’s a tie. <br> <br> It’s often played in a best-two-out-of-three format as a quick contest to decide who gets to go first or something like that.";
+          juego = "RPS";
+          break;
+        //Caso del jackpot o slot machine
+        case 2:
+          imagen.src = "Menu/Imagenes/jackpot.jpg";
+          info.innerHTML = "In the slot machine there will be a lever below the slot machine, each slot has a certain type of images representing different values. <br><br>🔆 If you use the lever once only the first slot will stop, so you have to use the lever once for each slot. <br><br> 🔆 If you complete all the slots with the same image, you win a certain quantity of points, the points will be accumulating. <br><br>There will be an easter-egg if you win with the key. 🐀";
+          juego = "SlotM";
+          break;
+        //Caso del memorama
+        case 3:
+          imagen.src = "Menu/Imagenes/memory.png";
+          info.innerHTML = "In the memory game the objective is to match all the pairs. <br><br> 🧿 You can turn over any two cards (one at a time) and keep them if the cards match. <br><br>🧿 If they successfully match a pair they get to keep the cards. <br><br>🧿 When you turn over two cards that do not match, those cards are turned face down again (in the same position). <br><br>🧿 You win if you manage to pair all the deck of cards.";
+          juego = "MEMORAMA";
+          break;
+      }
+    }
+    //funcion para llevar a la página segun la variable definida anteriormente
+    function llevar(){
+      switch (juego) {
+        case "TTT":
+          document.location = "indexTTT.html"
+          break;
+        case "RPS":
+          document.location = "indexRPS.html"
+          break;
+        case "SlotM":
+          document.location = "indexSlotM.html"
+          break;
+        case "MEMORAMA":
+          document.location = "indexMemory.html"
+          break;
+      }
+    }
+  </script>
+</body>
+
+</html>

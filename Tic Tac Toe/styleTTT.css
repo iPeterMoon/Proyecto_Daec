@@ -1,0 +1,134 @@
+*{
+  transition: all 0.5s;
+}
+table {
+  width: 200px;
+  height: 200px;
+  border-spacing: 10px;
+}
+
+th,
+td {
+  size: 66px;
+  text-align: center;
+}
+
+header {
+  background-color: #814DB2;
+  height: 80px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+  margin-left: -10px;
+}
+
+body {
+  background-color: #B2B4FF;
+  margin-top: 0px;
+  overflow-x: hidden;
+}
+
+button {
+  border-color: #BDBDBD;
+  background-color: white;
+  width: 66.6px;
+  height: 66.6px;
+  font-size: 30px;
+  cursor: pointer;
+  font-family: Verdana;
+  font-weight: bold;
+}
+
+button.Headr {
+  margin-top: 5px;
+  font-size: 20px;
+  font-family: "Rubik Mono One";
+  color: #814DB2;
+  background-color: #BB90E3;
+  width: 300px;
+  height: 60px;
+  border-width: thick;
+  border-style: double;
+  border-radius: 15px;
+  border-color: #F0E1FD;
+  border-width: thick;
+  min-width: 50px;
+  cursor: pointer;
+}
+
+button.Headr:hover {
+  background-color: #DDC8F1;
+  border-color: white;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+button.nuevoJuego {
+  font-size: 20px;
+  color: #814DB2;
+  font-family: "Rubik Mono One";
+  background-color: #BB90E3;
+  padding: 20px;
+  border-radius: 100px;
+  border: white 5px solid;
+  margin-top: 20px;
+  height: auto;
+  width: calc(15vw);
+  cursor: pointer;
+}
+.nuevoJuego:hover{
+  background-color: #DDC8F1;
+  border-color: white;
+}
+.menubar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.columna {
+  flex: 25%;
+}
+
+@media screen and (max-width:1250px) {
+  .columna {
+    flex: 50%;
+  }
+
+  header {
+    height: 150px
+  }
+}
+
+@media screen and (max-width:650px) {
+  .menubar {
+    flex-direction: column;
+  }
+
+  header {
+    height: 300px
+  }
+}
+
+em {
+  color: #E13835;
+}
+
+i {
+  color: #C779EE;
+}
+
+;
+80px overflow-x: hidden;
+}
+
+p {
+  em {
+    i {
+      color: #C779EE;
+    }

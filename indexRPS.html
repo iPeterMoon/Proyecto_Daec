@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="Rock Paper Scissors/styleRPS.css">
+  <script src="Rock Paper Scissors/mainRPS.js"></script>
+
+</head>
+
+<body>
+  <!--Cabecera que lleva a las demás páginas segun el botón-->
+  <header>
+    <div class = "menubar">
+      <div class="columna">
+        <button class="Headr" onclick="document.location='index.html'"> MENU </button>
+      </div>
+      <div class="columna">
+        <button class="Headr" onclick="document.location='indexTTT.html'"> TIC-TAC-TOE </button>
+      </div>
+      <div class="columna">
+        <button class="Headr" onclick="document.location='indexSlotM.html'"> SLOT MACHINE </button>
+      </div>
+      <div class="columna">
+        <button class="Headr" onclick="document.location='indexMemory.html'"> MEMORY GAME </button>
+        </div>
+    </div>
+
+  </header>
+  <center>
+    <!--Imagenes donde se pondrán las selecciones del jugador y de la computadora(random)-->
+    <img id="player" class="disp" src="Rock Paper Scissors/Imagenes/loading.gif" alt="" height="200px" width="200px">
+    <img id="botsote" class="rotar" src="Rock Paper Scissors/Imagenes/loading.gif" alt="" height="200px" width="200px">
+    <br><br>
+    <!--Botones a seleccionar piedra papel o tijera-->
+    <button id="piedra" onclick="piedra()"><img src="Rock Paper Scissors/Imagenes/rock.png" alt="rock" height="200px" width="200px"></button>
+    <button id="papel" onclick="papel()"><img src="Rock Paper Scissors/Imagenes/papel.png" alt="paper" height="200px" width="200px"></button>
+    <button id="tijera" onclick="tijera()"><img src="Rock Paper Scissors/Imagenes/tijeras.png" alt="scissors" height="200px" width="200px"></button><br><br>
+    <!--Espacio donde irá el mensaje de ganar/perder-->
+    <div id="win"> &nbsp; </div>
+    <!--Botón para reiniciar el juego (recarga la página)-->
+    <button class="nuevoJuego" onclick="location.reload()">
+      RE-TRY
+    </button>
+  </center>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tic Tac Toe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Tic Tac Toe/styleTTT.css">
+  <script src="Tic Tac Toe/mainTTT.js"></script>
+</head>
+
+<body>
+  <!--Cabecera que lleva a las demás páginas-->
+  <header>
+    <div class="menubar">
+      <div class="columna">
+        <button class="Headr" onclick="document.location='index.html'"> MENU </button>
+      </div>
+      <div class="columna">
+        <button class="Headr" onclick="document.location='indexRPS.html'"> ROCK PAPER SCISSORS </button>
+      </div>
+      <div class="columna">
+        <button class="Headr" onclick="document.location='indexSlotM.html'"> SLOT MACHINE </button>
+      </div>
+      <div class="columna">
+        <button class="Headr" onclick="document.location='indexMemory.html'"> MEMORY GAME </button>
+      </div>
+    </div>
+  </header>
+  <center>
+    <br>
+    <!--Elemento para presentar de quien es el turno-->
+    <p id="turno"> Player <em>X</em>'s Turn</p>
+    <!--Tabla con todos los botones con sus funciones-->
+    <table>
+      <tr>
+        <th><button id="Uno" onclick="clic(this); checar();"></button></th>
+        <th><button id="Dos" onclick="clic(this); checar();"></button></th>
+        <th><button id="Tres" onclick="clic(this); checar();"></button></th>
+      </tr>
+      <tr>
+        <td><button id="Cuatro" onclick="clic(this); checar();"></button></td>
+        <td><button id="Cinco" onclick="clic(this); checar();"></button></td>
+        <td><button id="Seis" onclick="clic(this); checar();"></button></td>
+      </tr>
+      <tr>
+        <td><button id="Siete" onclick="clic(this); checar();"></button></td>
+        <td><button id="Ocho" onclick="clic(this); checar();"></button></td>
+        <td><button id="Nueve" onclick="clic(this); checar();"></button></td>
+      </tr>
+    </table>
+    <!--Botón que reinicia el juego (recarga la página)-->
+    <button class="nuevoJuego" onclick="location.reload()">
+      New Game
+    </button>
+  </center>
+</body>
+
+</html>

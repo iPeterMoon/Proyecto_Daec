@@ -1,0 +1,133 @@
+*{
+  transition: all 0.5s;
+}
+body {
+  background-color: #FFD7A6;
+  margin: 0px;
+}
+
+header {
+  background-color: #FF8129;
+  height: 80px;
+  padding: 20px;
+  top: 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.container{
+  text-align: center;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col {
+  display: inline-block;
+  margin: 30px;
+  padding:30px;
+  background-color: #FFE1BC;
+  height: 250px;
+  width: 190px;
+  text-align: center;
+  vertical-align: top;
+  font-family: verdana;
+  font-size: 20px;
+  font-weight: bold;
+  align-self: center;
+}
+
+.palanca{
+  margin-top:20px;
+  border-radius: 50%;
+  font-family: verdana;
+  padding: 15px 15px;
+  text-align: center;
+  border: none;
+  color: white;
+  background-color: #969696;
+  cursor: pointer;
+  width: 90px;
+  height: 90px;
+}
+.boton2{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-top:20px;
+  border-radius: 46%;
+  font-family: verdana;
+  padding: 15px 32px;
+  text-align: center;
+  border: none;
+  color: white;
+  width: 20;
+  background-color: #FF8129;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+#main {
+  width: 400px;
+}
+.jackpotimg{
+  background-color: #FFD7A6;
+  padding:10px;
+  border: solid #FF8129;
+  border-radius: 10px;
+}
+button.Headr {
+  margin-top: 15px;
+  font-size: 20px;
+  font-family: "Rubik Mono One";
+  color: #FF8129;
+  background-color: #FFD7A6;
+  width: 300px;
+  height: 60px;
+  border-width: thick;
+  border-style: double;
+  border-radius: 15px;
+  border-color: #FF8129;
+  border-width: thick;
+  min-width: 50px;
+  align-self: center;
+  cursor: pointer;
+}
+
+button.Headr:hover {
+  background-color: #FFE1BC;
+  border-color: white;
+}
+
+#rata{
+  margin-top:20px;
+  height: 120px;
+}
+.menubar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.columna {
+  flex: 25%;
+}
+
+@media screen and (max-width:1250px) {
+  .columna {
+    flex: 50%;
+  }
+
+  header {
+    height: 150px
+  }
+  .container{
+    flex-direction: column;
+    align-content: space-around;
+
+
+  }
+}
+@media screen and (max-width:650px) {
+  .menubar {
+    flex-direction: column;
+  }
+
+  header {
+    height: 300px
+  }
+}
